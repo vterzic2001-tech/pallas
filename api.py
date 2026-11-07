@@ -200,5 +200,11 @@ def api_progress():
     })
 
 
+
+@app.route('/service-worker.js')
+def sw():
+    return app.send_static_file('service-worker.js')
+
 if __name__ == "__main__":
+
     app.run(host="0.0.0.0", port=5000, debug=True)
